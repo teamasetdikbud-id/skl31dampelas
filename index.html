@@ -142,7 +142,7 @@
                 </div>
                 
                 <div class="text-center mt-8 text-xs font-medium text-slate-400 relative z-10">
-                    &copy; 2026 EduDigital. All rights reserved.
+                    &copy; 2026ManggePrompt. All rights reserved.
                 </div>
             </div>
 
@@ -508,7 +508,7 @@
         };
         
         let mockDataSiswa = [
-            { NISN: "12345", Password: "edudigital", Nama: "Budi Santoso", TTL: "Jakarta, 12 Mei 2008", Status_Kelulusan: "LULUS", SKL_Tersedia: "YA", Link_SKL: "https://example.com/skl_budi.pdf" },
+            { NISN: "12345", Password: "admin123", Nama: "Budi Santoso", TTL: "Jakarta, 12 Mei 2008", Status_Kelulusan: "LULUS", SKL_Tersedia: "YA", Link_SKL: "https://example.com/skl_budi.pdf" },
             { NISN: "54321", Password: "123", Nama: "Siti Aminah", TTL: "Bandung, 3 Mar 2008", Status_Kelulusan: "TIDAK LULUS", SKL_Tersedia: "TIDAK", Link_SKL: "" }
         ];
 
@@ -643,7 +643,7 @@
         }
 
         function tampilkanTentang() {
-            showAlert("Aplikasi Kelulusan v1.0. Dibuat oleh EduDigital.");
+            showAlert("Aplikasi Kelulusan v1.0. Dibuat olehManggePrompt.");
         }
 
         // ==========================================
@@ -673,7 +673,7 @@
             if(IS_PREVIEW) {
                 setTimeout(() => {
                     hideLoader();
-                    if(u === 'admin' && p === 'edudigital') {
+                    if(u === 'admin' && p === 'admin123') {
                         currentUser = { role: 'admin', username: 'admin' };
                         initAdmin();
                     } else {
