@@ -33,7 +33,7 @@
             width: 100%;
             max-width: 414px; /* Setara iPhone 11/12/13/14 Pro Max */
             height: 100%;
-            background-color: #f3f4f6;
+            background-color: #fcfcfc;
             position: relative;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
             overflow-y: auto;
@@ -45,7 +45,8 @@
         /* Utility Classes */
         .hidden-el { display: none !important; }
         .glass-header {
-            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            /* Tema Merah Putih */
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -55,10 +56,10 @@
             padding-bottom: env(safe-area-inset-bottom);
         }
         
-        /* Loader */
+        /* Loader dengan aksen Merah */
         .loader {
             border: 4px solid #f3f3f3;
-            border-top: 4px solid #3b82f6;
+            border-top: 4px solid #dc2626;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -104,15 +105,15 @@
             <!-- HALAMAN LOGIN MODERN -->
             <div id="pageLogin" class="flex-1 flex flex-col justify-center px-6 py-12 relative overflow-hidden bg-slate-50">
                 
-                <!-- Background Ornaments -->
-                <div class="absolute top-0 -left-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
-                <div class="absolute top-0 -right-4 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
-                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+                <!-- Background Ornaments (Merah) -->
+                <div class="absolute top-0 -left-4 w-72 h-72 bg-red-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
+                <div class="absolute top-0 -right-4 w-72 h-72 bg-rose-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob"></div>
                 
                 <div class="relative z-10 w-full max-w-sm mx-auto">
                     <div class="text-center mb-8">
                         <div class="relative inline-block">
-                            <div class="absolute inset-0 bg-blue-500 rounded-full blur opacity-20"></div>
+                            <div class="absolute inset-0 bg-red-500 rounded-full blur opacity-20"></div>
                             <img id="loginLogo" src="https://cdn-icons-png.flaticon.com/512/330/330999.png" alt="Logo" class="relative w-24 h-24 mx-auto mb-4 drop-shadow-xl rounded-full bg-white/80 backdrop-blur-sm p-3 border border-white/50">
                         </div>
                         <h2 id="loginSekolahName" class="text-3xl font-black text-slate-800 tracking-tight">Sistem Kelulusan</h2>
@@ -122,19 +123,19 @@
                     <div class="bg-white/70 backdrop-blur-xl p-8 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-white/60">
                         <form id="loginForm" onsubmit="handleLogin(event)">
                             <div class="mb-5 relative group">
-                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-red-600 transition-colors">
                                     <i class="fas fa-user"></i>
                                 </div>
-                                <input type="text" id="loginUsername" required placeholder="NISN / Username Admin" class="w-full pl-11 pr-4 py-3.5 bg-white/50 rounded-2xl border-none ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-slate-700 placeholder-slate-400 font-medium">
+                                <input type="text" id="loginUsername" required placeholder="NISN / Username Admin" class="w-full pl-11 pr-4 py-3.5 bg-white/50 rounded-2xl border-none ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all text-slate-700 placeholder-slate-400 font-medium">
                             </div>
                             <div class="mb-8 relative group">
-                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-red-600 transition-colors">
                                     <i class="fas fa-lock"></i>
                                 </div>
-                                <input type="password" id="loginPassword" required placeholder="Password" class="w-full pl-11 pr-4 py-3.5 bg-white/50 rounded-2xl border-none ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-slate-700 placeholder-slate-400 font-medium">
+                                <input type="password" id="loginPassword" required placeholder="Password" class="w-full pl-11 pr-4 py-3.5 bg-white/50 rounded-2xl border-none ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all text-slate-700 placeholder-slate-400 font-medium">
                                 <p class="text-[11px] text-slate-400 mt-2 ml-2"><i class="fas fa-info-circle mr-1"></i>Siswa: Gunakan password sekolah</p>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-[0_8px_20px_rgb(59,130,246,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-blue-500/50">
+                            <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3.5 px-4 rounded-2xl shadow-[0_8px_20px_rgb(220,38,38,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-red-500/50">
                                 MASUK SEKARANG
                             </button>
                         </form>
@@ -142,7 +143,7 @@
                 </div>
                 
                 <div class="text-center mt-8 text-xs font-medium text-slate-400 relative z-10">
-                    &copy; 2026ManggePrompt. All rights reserved.
+                    &copy; 2026 ManggePrompt. All rights reserved.
                 </div>
             </div>
 
@@ -157,10 +158,10 @@
                             <img id="siswaHeaderLogo" src="" class="w-10 h-10 rounded-full bg-white p-1">
                             <div>
                                 <h1 class="font-bold text-lg leading-tight" id="siswaHeaderSekolah">Nama Sekolah</h1>
-                                <p class="text-blue-200 text-xs">Pengumuman Kelulusan</p>
+                                <p class="text-red-200 text-xs">Pengumuman Kelulusan</p>
                             </div>
                         </div>
-                        <button onclick="toggleProfileMenu()" class="text-white hover:bg-blue-600 p-2 rounded-full transition">
+                        <button onclick="toggleProfileMenu()" class="text-white hover:bg-red-800 p-2 rounded-full transition">
                             <i class="fas fa-user-circle text-2xl"></i>
                         </button>
                     </div>
@@ -169,7 +170,7 @@
                 <!-- Floating Profile Card -->
                 <div class="px-5 -mt-6 relative z-10">
                     <div class="bg-white rounded-xl shadow-md p-4 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">
+                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-full flex items-center justify-center text-xl font-bold">
                             <i class="fas fa-user-graduate"></i>
                         </div>
                         <div class="flex-1 overflow-hidden">
@@ -183,39 +184,39 @@
                 <div class="flex-1 overflow-y-auto p-5 pb-24" id="siswaContentArea">
                     
                     <!-- Kondisi 1: Menunggu Waktu (Countdown) -->
-                    <div id="siswaCountdownView" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center mt-4 hidden-el">
-                        <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div id="siswaCountdownView" class="bg-white rounded-2xl shadow-sm border border-red-100 p-6 text-center mt-4 hidden-el">
+                        <div class="w-16 h-16 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-100">
                             <i class="fas fa-hourglass-half text-2xl"></i>
                         </div>
                         <h3 class="font-bold text-gray-800 text-lg mb-2">Waktu Pengumuman</h3>
-                        <p class="text-sm text-gray-500 mb-6">Hasil kelulusan akan dapat dilihat dalam:</p>
+                        <p class="text-sm text-gray-500 mb-6">Hasil kelulusan Anda akan tersedia dalam waktu:</p>
                         
-                        <div class="flex justify-center gap-3 timer-text text-xl font-bold text-blue-600">
-                            <div class="bg-blue-50 w-16 py-3 rounded-lg flex flex-col"><span id="tHari">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Hari</span></div>
-                            <div class="text-2xl mt-2">:</div>
-                            <div class="bg-blue-50 w-16 py-3 rounded-lg flex flex-col"><span id="tJam">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Jam</span></div>
-                            <div class="text-2xl mt-2">:</div>
-                            <div class="bg-blue-50 w-16 py-3 rounded-lg flex flex-col"><span id="tMenit">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Menit</span></div>
-                            <div class="text-2xl mt-2">:</div>
-                            <div class="bg-blue-50 w-16 py-3 rounded-lg flex flex-col"><span id="tDetik">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Detik</span></div>
+                        <div class="flex justify-center gap-2 timer-text text-xl font-bold text-red-600">
+                            <div class="bg-red-50 border border-red-100 w-16 py-3 rounded-lg flex flex-col"><span id="tHari">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Hari</span></div>
+                            <div class="text-2xl mt-2 text-red-300">:</div>
+                            <div class="bg-red-50 border border-red-100 w-16 py-3 rounded-lg flex flex-col"><span id="tJam">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Jam</span></div>
+                            <div class="text-2xl mt-2 text-red-300">:</div>
+                            <div class="bg-red-50 border border-red-100 w-16 py-3 rounded-lg flex flex-col"><span id="tMenit">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Menit</span></div>
+                            <div class="text-2xl mt-2 text-red-300">:</div>
+                            <div class="bg-red-50 border border-red-100 w-16 py-3 rounded-lg flex flex-col"><span id="tDetik">00</span><span class="text-xs text-gray-500 font-sans font-normal mt-1">Detik</span></div>
                         </div>
                     </div>
 
                     <!-- Kondisi 2: Waktu Tiba, Tombol Buka -->
-                    <div id="siswaReadyView" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center mt-4 hidden-el">
-                        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div id="siswaReadyView" class="bg-white rounded-2xl shadow-sm border border-red-100 p-6 text-center mt-4 hidden-el">
+                        <div class="w-20 h-20 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-100">
                             <i class="fas fa-envelope-open-text text-3xl"></i>
                         </div>
-                        <h3 class="font-bold text-gray-800 text-xl mb-2">Pengumuman Telah Dibuka</h3>
-                        <p class="text-sm text-gray-500 mb-6">Silakan klik tombol di bawah ini untuk melihat hasil kelulusan Anda.</p>
-                        <button onclick="lihatHasilKelulusan()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200 transform hover:scale-105">
+                        <h3 class="font-bold text-gray-800 text-xl mb-2">Waktu Pengumuman Tiba!</h3>
+                        <p class="text-sm text-gray-500 mb-6">Tombol akses hasil kelulusan Anda kini telah aktif. Silakan klik tombol di bawah ini.</p>
+                        <button onclick="lihatHasilKelulusan()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-600/30 transition duration-200 transform hover:scale-105">
                             LIHAT HASIL KELULUSAN
                         </button>
                     </div>
 
                     <!-- Kondisi 3: Hasil Kelulusan -->
                     <div id="siswaResultView" class="mt-4 hidden-el">
-                        <h3 class="font-bold text-gray-800 mb-3 px-1">Detail Siswa</h3>
+                        <h3 class="font-bold text-gray-800 mb-3 px-1 border-l-4 border-red-600 pl-2">Detail Siswa</h3>
                         <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-5">
                             <div class="grid grid-cols-3 gap-2 text-sm border-b pb-2 mb-2">
                                 <div class="text-gray-500">TTL</div>
@@ -231,7 +232,7 @@
                             </div>
                         </div>
 
-                        <h3 class="font-bold text-gray-800 mb-3 px-1">Status Kelulusan</h3>
+                        <h3 class="font-bold text-gray-800 mb-3 px-1 border-l-4 border-red-600 pl-2">Status Kelulusan</h3>
                         <div id="boxStatusLulus" class="rounded-2xl shadow-sm border p-6 text-center mb-5 transition-all">
                             <i id="iconStatus" class="fas fa-check-circle text-5xl mb-3"></i>
                             <h2 class="text-3xl font-black mb-1" id="textStatusLulus">LULUS</h2>
@@ -240,7 +241,7 @@
 
                         <!-- Tombol SKL (Hanya jika Lulus dan Ada Link) -->
                         <div id="boxTombolSKL" class="hidden-el">
-                            <button onclick="bukaLinkSKL()" class="w-full flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200">
+                            <button onclick="bukaLinkSKL()" class="w-full flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200">
                                 <i class="fas fa-file-download text-xl"></i> UNDUH SURAT KELULUSAN (SKL)
                             </button>
                         </div>
@@ -256,7 +257,7 @@
                         
                         <div class="space-y-3">
                             <button onclick="installPWA()" id="btnInstallPWA" class="w-full flex items-center gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 text-left transition hidden-el">
-                                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center"><i class="fas fa-download"></i></div>
+                                <div class="w-10 h-10 bg-red-50 text-red-600 rounded-full flex items-center justify-center border border-red-100"><i class="fas fa-download"></i></div>
                                 <div>
                                     <div class="font-bold text-gray-800">Install Aplikasi</div>
                                     <div class="text-xs text-gray-500">Pasang di layar utama (Android/iOS)</div>
@@ -264,14 +265,14 @@
                             </button>
                             
                             <button onclick="tampilkanTentang()" class="w-full flex items-center gap-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 text-left transition">
-                                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center"><i class="fas fa-info-circle"></i></div>
+                                <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center"><i class="fas fa-info-circle"></i></div>
                                 <div>
                                     <div class="font-bold text-gray-800">Tentang Aplikasi</div>
                                     <div class="text-xs text-gray-500">Informasi sistem versi 1.0</div>
                                 </div>
                             </button>
 
-                            <button onclick="logout()" class="w-full flex items-center gap-4 p-4 rounded-xl bg-red-50 hover:bg-red-100 text-left transition">
+                            <button onclick="logout()" class="w-full flex items-center gap-4 p-4 rounded-xl bg-red-50 hover:bg-red-100 text-left transition border border-red-100">
                                 <div class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center"><i class="fas fa-sign-out-alt"></i></div>
                                 <div>
                                     <div class="font-bold text-red-600">Keluar Sistem</div>
@@ -288,29 +289,29 @@
             <!-- ========================================== -->
             <div id="areaAdmin" class="hidden-el flex-1 flex flex-col h-full bg-gray-50 relative">
                 <!-- Admin Header -->
-                <div class="bg-white border-b px-5 py-4 flex justify-between items-center sticky top-0 z-20">
+                <div class="bg-white border-b border-red-100 px-5 py-4 flex justify-between items-center sticky top-0 z-20">
                     <div>
                         <h1 class="font-bold text-lg text-gray-800">Panel Admin</h1>
-                        <p class="text-xs text-gray-500">Manajemen Kelulusan</p>
+                        <p class="text-xs text-red-600 font-medium">Manajemen Kelulusan</p>
                     </div>
-                    <button onclick="logout()" class="text-red-500 hover:bg-red-50 p-2 rounded-lg text-sm font-semibold transition flex items-center gap-2">
+                    <button onclick="logout()" class="text-red-500 hover:bg-red-50 p-2 rounded-lg text-sm font-semibold transition flex items-center gap-2 border border-transparent hover:border-red-100">
                         <i class="fas fa-sign-out-alt"></i> Keluar
                     </button>
                 </div>
 
                 <!-- Admin Content: DASHBOARD -->
                 <div id="adminTabDashboard" class="admin-tab-content flex-1 overflow-y-auto p-5 pb-24">
-                    <h2 class="font-bold text-gray-700 mb-4">Statistik Kelulusan</h2>
+                    <h2 class="font-bold text-gray-700 mb-4 border-l-4 border-red-600 pl-2">Statistik Kelulusan</h2>
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-blue-600 text-white p-4 rounded-xl shadow">
-                            <p class="text-blue-100 text-xs font-semibold uppercase">Total Siswa</p>
+                        <div class="bg-gray-800 text-white p-4 rounded-xl shadow">
+                            <p class="text-gray-300 text-xs font-semibold uppercase">Total Siswa</p>
                             <h3 class="text-3xl font-black mt-1" id="statTotal">0</h3>
                         </div>
-                        <div class="bg-green-500 text-white p-4 rounded-xl shadow">
+                        <div class="bg-green-600 text-white p-4 rounded-xl shadow">
                             <p class="text-green-100 text-xs font-semibold uppercase">Lulus</p>
                             <h3 class="text-3xl font-black mt-1" id="statLulus">0</h3>
                         </div>
-                        <div class="bg-red-500 text-white p-4 rounded-xl shadow">
+                        <div class="bg-red-600 text-white p-4 rounded-xl shadow">
                             <p class="text-red-100 text-xs font-semibold uppercase">Tidak Lulus</p>
                             <h3 class="text-3xl font-black mt-1" id="statTidak">0</h3>
                         </div>
@@ -319,27 +320,27 @@
                             <h3 class="text-3xl font-black mt-1" id="statTunda">0</h3>
                         </div>
                     </div>
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                        <p class="text-sm text-gray-600"><i class="fas fa-info-circle text-blue-500 mr-2"></i> Pastikan untuk memeriksa tab Pengaturan untuk menset waktu pengumuman agar siswa dapat melihat hasil.</p>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-red-100">
+                        <p class="text-sm text-gray-600"><i class="fas fa-info-circle text-red-500 mr-2"></i> Pastikan untuk memeriksa tab Pengaturan untuk menset waktu pengumuman agar siswa dapat melihat hasil.</p>
                     </div>
                 </div>
 
                 <!-- Admin Content: DATA SISWA -->
                 <div id="adminTabDataSiswa" class="admin-tab-content hidden-el flex-1 overflow-y-auto p-5 pb-24">
-                    <div class="flex justify-between items-center mb-4">
+                    <div class="flex justify-between items-center mb-4 border-l-4 border-red-600 pl-2">
                         <h2 class="font-bold text-gray-700">Data Siswa</h2>
                         <div class="flex gap-2">
-                            <button onclick="bukaModalImport()" class="bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-sm shadow hover:bg-emerald-600 transition">
+                            <button onclick="bukaModalImport()" class="bg-emerald-600 text-white px-3 py-1.5 rounded-lg text-sm shadow hover:bg-emerald-700 transition">
                                 <i class="fas fa-file-excel mr-1"></i> Import
                             </button>
-                            <button onclick="bukaModalSiswa(null)" class="bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm shadow hover:bg-blue-700 transition">
+                            <button onclick="bukaModalSiswa(null)" class="bg-red-600 text-white px-3 py-1.5 rounded-lg text-sm shadow hover:bg-red-700 transition">
                                 <i class="fas fa-plus mr-1"></i> Tambah
                             </button>
                         </div>
                     </div>
                     <div class="relative mb-4">
                         <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-                        <input type="text" id="searchSiswa" onkeyup="handleSearchSiswa()" placeholder="Cari Nama / NISN..." class="w-full pl-10 pr-4 py-2 border rounded-lg text-sm focus:outline-none focus:border-blue-500">
+                        <input type="text" id="searchSiswa" onkeyup="handleSearchSiswa()" placeholder="Cari Nama / NISN..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition">
                     </div>
                     
                     <div id="listDataSiswa">
@@ -349,36 +350,36 @@
 
                 <!-- Admin Content: PENGATURAN -->
                 <div id="adminTabPengaturan" class="admin-tab-content hidden-el flex-1 overflow-y-auto p-5 pb-24">
-                    <h2 class="font-bold text-gray-700 mb-4">Pengaturan Aplikasi</h2>
-                    <form id="formPengaturan" onsubmit="simpanPengaturan(event)" class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h2 class="font-bold text-gray-700 mb-4 border-l-4 border-red-600 pl-2">Pengaturan Aplikasi</h2>
+                    <form id="formPengaturan" onsubmit="simpanPengaturan(event)" class="bg-white p-5 rounded-xl shadow-sm border border-red-100">
                         <div class="mb-4">
                             <label class="block text-gray-700 text-xs font-bold mb-1">Nama Sekolah</label>
-                            <input type="text" id="setNamaSekolah" required class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:border-blue-500">
+                            <input type="text" id="setNamaSekolah" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500">
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700 text-xs font-bold mb-1">URL Logo (Bisa dikosongi)</label>
-                            <input type="url" id="setLogo" class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:border-blue-500" placeholder="https://...">
+                            <input type="url" id="setLogo" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500" placeholder="https://...">
                         </div>
                         <div class="mb-6">
                             <label class="block text-gray-700 text-xs font-bold mb-1">Waktu Pengumuman Dibuka</label>
-                            <input type="datetime-local" id="setWaktu" required class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:border-blue-500">
-                            <p class="text-xs text-gray-400 mt-1">Siswa tidak bisa melihat hasil sebelum waktu ini.</p>
+                            <input type="datetime-local" id="setWaktu" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500">
+                            <p class="text-xs text-gray-400 mt-1">Siswa tidak bisa mengklik tombol hasil sebelum waktu ini tiba.</p>
                         </div>
-                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg shadow transition">
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg shadow transition">
                             SIMPAN PENGATURAN
                         </button>
                     </form>
                 </div>
 
                 <!-- Admin Bottom Navigation -->
-                <div class="absolute bottom-0 left-0 right-0 bg-white border-t bottom-nav z-20 flex justify-around items-center h-16">
-                    <button onclick="switchAdminTab('Dashboard')" id="navAdminDashboard" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-blue-600">
+                <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 bottom-nav z-20 flex justify-around items-center h-16">
+                    <button onclick="switchAdminTab('Dashboard')" id="navAdminDashboard" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-red-600">
                         <i class="fas fa-home text-xl mb-1"></i><span class="text-[10px] font-semibold">Dashboard</span>
                     </button>
-                    <button onclick="switchAdminTab('DataSiswa')" id="navAdminDataSiswa" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-blue-600 transition">
+                    <button onclick="switchAdminTab('DataSiswa')" id="navAdminDataSiswa" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-red-600 transition">
                         <i class="fas fa-users text-xl mb-1"></i><span class="text-[10px] font-semibold">Data Siswa</span>
                     </button>
-                    <button onclick="switchAdminTab('Pengaturan')" id="navAdminPengaturan" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-blue-600 transition">
+                    <button onclick="switchAdminTab('Pengaturan')" id="navAdminPengaturan" class="nav-admin-btn flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-red-600 transition">
                         <i class="fas fa-cog text-xl mb-1"></i><span class="text-[10px] font-semibold">Pengaturan</span>
                     </button>
                 </div>
@@ -386,52 +387,52 @@
                 <!-- Modal Form Siswa (Admin) -->
                 <div id="modalFormSiswa" class="hidden-el fixed inset-0 z-[9999999] flex items-center justify-center modal-overlay p-4">
                     <div class="bg-white w-full max-w-[380px] rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-full">
-                        <div class="bg-blue-600 p-4 flex justify-between items-center text-white shrink-0">
+                        <div class="bg-red-600 p-4 flex justify-between items-center text-white shrink-0">
                             <h3 class="font-bold" id="modalSiswaTitle">Tambah Siswa</h3>
-                            <button onclick="tutupModalSiswa()" class="text-white hover:text-gray-200"><i class="fas fa-times text-xl"></i></button>
+                            <button onclick="tutupModalSiswa()" class="text-white hover:text-red-200 transition"><i class="fas fa-times text-xl"></i></button>
                         </div>
                         <div class="p-5 overflow-y-auto">
                             <form id="formSiswa" onsubmit="simpanSiswa(event)">
                                 <input type="hidden" id="fId">
                                 <div class="mb-3">
                                     <label class="block text-gray-700 text-xs font-bold mb-1">NISN / Username</label>
-                                    <input type="text" id="fNISN" required class="w-full px-3 py-2 border rounded-lg text-sm">
+                                    <input type="text" id="fNISN" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block text-gray-700 text-xs font-bold mb-1">Password</label>
-                                    <input type="text" id="fPassword" required class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="Contoh: 123456 atau TTL">
+                                    <input type="text" id="fPassword" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500" placeholder="Contoh: 123456 atau TTL">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block text-gray-700 text-xs font-bold mb-1">Nama Lengkap</label>
-                                    <input type="text" id="fNama" required class="w-full px-3 py-2 border rounded-lg text-sm">
+                                    <input type="text" id="fNama" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block text-gray-700 text-xs font-bold mb-1">Tempat, Tanggal Lahir</label>
-                                    <input type="text" id="fTTL" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="Jakarta, 1 Jan 2008">
+                                    <input type="text" id="fTTL" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500" placeholder="Jakarta, 1 Jan 2008">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block text-gray-700 text-xs font-bold mb-1">Status Kelulusan</label>
-                                    <select id="fStatus" required class="w-full px-3 py-2 border rounded-lg text-sm bg-white">
+                                    <select id="fStatus" required class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white focus:outline-none focus:border-red-500">
                                         <option value="LULUS">LULUS</option>
                                         <option value="TIDAK LULUS">TIDAK LULUS</option>
                                         <option value="DITUNDA">DITUNDA</option>
                                     </select>
                                 </div>
-                                <div class="mb-3 p-3 bg-gray-50 border rounded-lg">
+                                <div class="mb-3 p-3 bg-red-50 border border-red-100 rounded-lg">
                                     <label class="flex items-center gap-2 mb-2 cursor-pointer">
-                                        <input type="checkbox" id="fSKL_Tersedia" onchange="toggleLinkSKL()" class="w-4 h-4 text-blue-600 rounded">
+                                        <input type="checkbox" id="fSKL_Tersedia" onchange="toggleLinkSKL()" class="w-4 h-4 text-red-600 rounded border-gray-300 focus:ring-red-500">
                                         <span class="text-sm font-bold text-gray-700">Sertakan Link SKL (Surat Keterangan Lulus)</span>
                                     </label>
                                     <div id="wrapLinkSKL" class="hidden-el mt-2">
-                                        <input type="url" id="fLinkSKL" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="https://drive.google.com/...">
-                                        <p class="text-[10px] text-gray-400 mt-1">Masukkan link PDF/Drive yang bisa diakses publik.</p>
+                                        <input type="url" id="fLinkSKL" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-red-500" placeholder="https://drive.google.com/...">
+                                        <p class="text-[10px] text-gray-500 mt-1">Masukkan link PDF/Drive yang bisa diakses publik.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-2 mt-5">
-                                    <button type="button" onclick="tutupModalSiswa()" class="flex-1 bg-gray-200 text-gray-800 py-2.5 rounded-lg text-sm font-bold hover:bg-gray-300">Batal</button>
-                                    <button type="submit" class="flex-1 bg-blue-600 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700">Simpan</button>
+                                    <button type="button" onclick="tutupModalSiswa()" class="flex-1 bg-gray-200 text-gray-800 py-2.5 rounded-lg text-sm font-bold hover:bg-gray-300 transition">Batal</button>
+                                    <button type="submit" class="flex-1 bg-red-600 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-red-700 transition">Simpan</button>
                                 </div>
-                                <button type="button" id="btnHapusSiswa" onclick="hapusSiswa()" class="w-full mt-2 text-red-500 bg-red-50 py-2 rounded-lg text-sm font-bold hover:bg-red-100 hidden-el">Hapus Data Siswa</button>
+                                <button type="button" id="btnHapusSiswa" onclick="hapusSiswa()" class="w-full mt-2 text-red-600 bg-red-50 border border-red-100 py-2 rounded-lg text-sm font-bold hover:bg-red-100 transition hidden-el">Hapus Data Siswa</button>
                             </form>
                         </div>
                     </div>
@@ -442,12 +443,12 @@
                     <div class="bg-white w-full max-w-[380px] rounded-2xl shadow-2xl overflow-hidden flex flex-col">
                         <div class="bg-emerald-600 p-4 flex justify-between items-center text-white shrink-0">
                             <h3 class="font-bold">Import Data Excel</h3>
-                            <button onclick="tutupModalImport()" class="text-white hover:text-gray-200"><i class="fas fa-times text-xl"></i></button>
+                            <button onclick="tutupModalImport()" class="text-white hover:text-emerald-200 transition"><i class="fas fa-times text-xl"></i></button>
                         </div>
                         <div class="p-5">
                             <div class="mb-5 text-center">
                                 <p class="text-sm text-gray-600 mb-3">Unduh template Excel terlebih dahulu, isi data siswa, lalu unggah file tersebut di sini.</p>
-                                <button onclick="downloadTemplateExcel()" class="bg-indigo-50 text-indigo-600 border border-indigo-200 px-4 py-2 rounded-lg text-sm font-bold hover:bg-indigo-100 transition w-full flex items-center justify-center gap-2">
+                                <button onclick="downloadTemplateExcel()" class="bg-gray-50 text-gray-800 border border-gray-200 px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-100 transition w-full flex items-center justify-center gap-2">
                                     <i class="fas fa-download"></i> Unduh Format Template
                                 </button>
                             </div>
@@ -460,8 +461,8 @@
                                     <input type="file" id="fileExcel" accept=".xlsx, .xls" required class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100 cursor-pointer border border-gray-200 rounded-lg">
                                 </div>
                                 <div class="flex gap-2 mt-5">
-                                    <button type="button" onclick="tutupModalImport()" class="flex-1 bg-gray-200 text-gray-800 py-2.5 rounded-lg text-sm font-bold hover:bg-gray-300">Batal</button>
-                                    <button type="submit" class="flex-1 bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-emerald-700">Mulai Import</button>
+                                    <button type="button" onclick="tutupModalImport()" class="flex-1 bg-gray-200 text-gray-800 py-2.5 rounded-lg text-sm font-bold hover:bg-gray-300 transition">Batal</button>
+                                    <button type="submit" class="flex-1 bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-emerald-700 transition">Mulai Import</button>
                                 </div>
                             </form>
                         </div>
@@ -472,14 +473,14 @@
                 <div id="modalConfirm" class="hidden-el fixed inset-0 z-[99999999] flex items-center justify-center modal-overlay p-4">
                     <div class="bg-white w-full max-w-[320px] rounded-3xl shadow-2xl overflow-hidden flex flex-col text-center">
                         <div class="p-6">
-                            <div class="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 border-4 border-red-100">
+                            <div class="w-16 h-16 bg-red-50 text-red-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 border-4 border-red-100">
                                 <i class="fas fa-exclamation-triangle"></i>
                             </div>
                             <h3 class="font-bold text-gray-800 text-lg mb-2">Konfirmasi Hapus</h3>
                             <p class="text-sm text-gray-500 mb-6" id="confirmMessage">Yakin ingin menghapus data ini? Tindakan ini tidak dapat dibatalkan.</p>
                             <div class="flex gap-3">
                                 <button onclick="tutupConfirm()" class="flex-1 bg-gray-100 text-gray-800 py-3 rounded-xl text-sm font-bold hover:bg-gray-200 transition">Batal</button>
-                                <button onclick="eksekusiConfirm()" class="flex-1 bg-red-500 text-white py-3 rounded-xl text-sm font-bold hover:bg-red-600 transition shadow-lg shadow-red-500/30">Ya, Hapus</button>
+                                <button onclick="eksekusiConfirm()" class="flex-1 bg-red-600 text-white py-3 rounded-xl text-sm font-bold hover:bg-red-700 transition shadow-lg shadow-red-600/30">Ya, Hapus</button>
                             </div>
                         </div>
                     </div>
@@ -494,8 +495,8 @@
         // ==========================================
         // KONFIGURASI APLIKASI
         // ==========================================
-        const IS_PREVIEW = true; // Set ke false jika di-deploy ke Blogger & menggunakan GAS
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbwqllLEs_T-uHjJo00wQtsP79b4magwqQpLwrzxr7jwa19q4UWruG5WlD6eNgis6ZCA/exec";
+        const IS_PREVIEW = false; // Set ke false jika di-deploy ke Blogger & menggunakan GAS
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbzaiVdSBK0XgfLaMe4rcp5zQ4WdZTWTNrOEf9pOqgfQxqMsuuqb_w3SBztqqeldos6U/exec";
 
         // ==========================================
         // STATE GLOBAL & MOCK DATA
@@ -504,7 +505,8 @@
         let globalSettings = {
             NAMA_SEKOLAH: "SDN 31 DAMPELAS",
             LOGO_URL: "https://cdn-icons-png.flaticon.com/512/330/330999.png",
-            WAKTU_PENGUMUMAN: new Date(new Date().getTime() + 10000).toISOString() // Default 10 detik kedepan utk tes
+            // Set default 10 detik dari waktu buka aplikasi untuk tes countdown
+            WAKTU_PENGUMUMAN: new Date(new Date().getTime() + 10000).toISOString() 
         };
         
         let mockDataSiswa = [
@@ -551,7 +553,6 @@
         }
 
         function showAlert(msg) {
-            // Karena alert dilarang, kita gunakan custom popup sederhana (atau fallback modal)
             const d = document.createElement('div');
             d.className = "fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full shadow-xl z-[99999999] text-sm animate-bounce transition-opacity";
             d.innerText = msg;
@@ -586,8 +587,8 @@
                     short_name: "Kelulusan",
                     start_url: window.location.href,
                     display: "standalone",
-                    background_color: "#1e40af",
-                    theme_color: "#1e40af",
+                    background_color: "#b91c1c",
+                    theme_color: "#b91c1c",
                     icons: [
                         { src: "https://cdn-icons-png.flaticon.com/512/330/330999.png", sizes: "192x192", type: "image/png" },
                         { src: "https://cdn-icons-png.flaticon.com/512/330/330999.png", sizes: "512x512", type: "image/png" }
@@ -601,7 +602,6 @@
                 link.href = manifestURL;
                 document.head.appendChild(link);
 
-                // Buat Dummy Service Worker (Hanya untuk memicu install prompt browser)
                 if ('serviceWorker' in navigator && (window.location.protocol === 'http:' || window.location.protocol === 'https:')) {
                     try {
                         const swCode = `
@@ -612,14 +612,11 @@
                         const swBlob = new Blob([swCode], {type: 'application/javascript'});
                         const swURL = URL.createObjectURL(swBlob);
                         navigator.serviceWorker.register(swURL).catch(e => {
-                            console.warn("Registrasi Service Worker ditolak oleh browser:", e);
+                            console.warn("Registrasi Service Worker ditolak:", e);
                         });
-                    } catch (swErr) {
-                        console.warn("Gagal membuat Service Worker:", swErr);
-                    }
+                    } catch (swErr) {}
                 }
 
-                // Tangkap Event Install
                 window.addEventListener('beforeinstallprompt', (e) => {
                     e.preventDefault();
                     pwaInstallEvent = e;
@@ -643,7 +640,7 @@
         }
 
         function tampilkanTentang() {
-            showAlert("Aplikasi Kelulusan v1.0. Dibuat olehManggePrompt.");
+            showAlert("Aplikasi Kelulusan v1.0. Dibuat oleh ManggePrompt.");
         }
 
         // ==========================================
@@ -655,7 +652,6 @@
         }
 
         function fetchSettings() {
-            // Ambil setting publik jika di production
             gasRequest({action: 'getSettingsPublic'}, res => {
                 if(res.status === 'success') {
                     globalSettings = res.data;
@@ -690,7 +686,7 @@
                 gasRequest({action: 'login', u: u, p: p}, res => {
                     hideLoader();
                     if(res.status === 'success') {
-                        currentUser = res.data; // Includes role and data
+                        currentUser = res.data;
                         globalSettings = res.settings;
                         if(currentUser.role === 'admin') initAdmin();
                         else initSiswa();
@@ -711,7 +707,7 @@
         }
 
         // ==========================================
-        // LOGIKA SISWA
+        // LOGIKA SISWA & HITUNG MUNDUR (COUNTDOWN)
         // ==========================================
         function initSiswa() {
             showPage('areaSiswa');
@@ -727,11 +723,12 @@
             document.getElementById('resNISN').innerText = currentUser.NISN;
             document.getElementById('resNama').innerText = currentUser.Nama;
 
-            // Sembunyikan semua view
+            // Sembunyikan semua view awal
             document.getElementById('siswaCountdownView').classList.add('hidden-el');
             document.getElementById('siswaReadyView').classList.add('hidden-el');
             document.getElementById('siswaResultView').classList.add('hidden-el');
 
+            // Mulai Hitung Mundur segera setelah login
             mulaiPenghitungWaktu();
         }
 
@@ -750,10 +747,12 @@
                 const distance = targetTime - now;
 
                 if (distance <= 0) {
+                    // Waktu habis: Hentikan timer, sembunyikan kotak hitung mundur, munculkan tombol
                     clearInterval(countdownInterval);
                     document.getElementById('siswaCountdownView').classList.add('hidden-el');
                     document.getElementById('siswaReadyView').classList.remove('hidden-el');
                 } else {
+                    // Waktu belum tiba: Tampilkan hitung mundur
                     document.getElementById('siswaReadyView').classList.add('hidden-el');
                     document.getElementById('siswaCountdownView').classList.remove('hidden-el');
                     
@@ -774,6 +773,7 @@
         }
 
         function lihatHasilKelulusan() {
+            // Sembunyikan Tombol Pembuka, Munculkan Hasil
             document.getElementById('siswaReadyView').classList.add('hidden-el');
             document.getElementById('siswaResultView').classList.remove('hidden-el');
             
@@ -788,7 +788,7 @@
             box.className = "rounded-2xl shadow-sm border p-6 text-center mb-5 text-white transition-all transform scale-100";
             
             if(st === 'LULUS') {
-                box.classList.add('bg-green-500', 'border-green-600');
+                box.classList.add('bg-green-600', 'border-green-700');
                 icon.className = "fas fa-check-circle text-5xl mb-3";
                 teks.innerText = "LULUS";
                 desc.innerText = "Selamat! Anda dinyatakan Lulus dari sekolah.";
@@ -799,7 +799,7 @@
                     btnSKL.classList.add('hidden-el');
                 }
             } else if (st === 'TIDAK LULUS') {
-                box.classList.add('bg-red-500', 'border-red-600');
+                box.classList.add('bg-red-600', 'border-red-700');
                 icon.className = "fas fa-times-circle text-5xl mb-3";
                 teks.innerText = "TIDAK LULUS";
                 desc.innerText = "Tetap semangat dan pantang menyerah.";
@@ -836,13 +836,13 @@
         function switchAdminTab(tab) {
             document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.add('hidden-el'));
             document.querySelectorAll('.nav-admin-btn').forEach(el => {
-                el.classList.remove('text-blue-600');
+                el.classList.remove('text-red-600');
                 el.classList.add('text-gray-400');
             });
 
             document.getElementById('adminTab' + tab).classList.remove('hidden-el');
             document.getElementById('navAdmin' + tab).classList.remove('text-gray-400');
-            document.getElementById('navAdmin' + tab).classList.add('text-blue-600');
+            document.getElementById('navAdmin' + tab).classList.add('text-red-600');
 
             if(tab === 'DataSiswa') {
                 if(IS_PREVIEW) renderTabelSiswa(true);
@@ -855,7 +855,7 @@
             gasRequest({action: 'getAdminData'}, res => {
                 hideLoader();
                 if(res.status === 'success') {
-                    mockDataSiswa = res.dataSiswa; // simpan di memori lokal untuk search
+                    mockDataSiswa = res.dataSiswa; 
                     globalSettings = res.settings;
                     renderStatistikAdmin(mockDataSiswa);
                     if(!document.getElementById('adminTabDataSiswa').classList.contains('hidden-el')){
@@ -876,10 +876,9 @@
         }
 
         function handleSearchSiswa() {
-            // Debounce: Menunda render 300ms agar browser tidak lag saat admin mengetik cepat
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
-                renderTabelSiswa(true); // Reset ke halaman 1 saat mencari
+                renderTabelSiswa(true);
             }, 300); 
         }
 
@@ -889,7 +888,6 @@
             const list = document.getElementById('listDataSiswa');
             const k = document.getElementById('searchSiswa').value.toLowerCase();
             
-            // Filter Data Sekali Saja
             const filtered = mockDataSiswa.filter(x => x.Nama.toLowerCase().includes(k) || x.NISN.toLowerCase().includes(k));
             
             if(filtered.length === 0) {
@@ -897,40 +895,36 @@
                 return;
             }
 
-            // Batasi Jumlah Render untuk kecepatan UI (Lazy Render DOM)
             const endIndex = currentPageSiswa * limitPerHalaman;
             const dataToRender = filtered.slice(0, endIndex);
             
-            let htmlHTML = ""; // Menggunakan string lebih cepat dari createElement
+            let htmlHTML = "";
 
             dataToRender.forEach((s) => {
                 let badge = "bg-yellow-100 text-yellow-700";
                 if(s.Status_Kelulusan === 'LULUS') badge = "bg-green-100 text-green-700";
                 if(s.Status_Kelulusan === 'TIDAK LULUS') badge = "bg-red-100 text-red-700";
                 
-                let sklIco = s.SKL_Tersedia === 'YA' ? '<i class="fas fa-file-pdf text-indigo-500 ml-2" title="SKL Tersedia"></i>' : '';
-
-                // Escape petik tunggal untuk keamanan passing parameter string ke dalam attribute HTML
+                let sklIco = s.SKL_Tersedia === 'YA' ? '<i class="fas fa-file-pdf text-red-600 ml-2" title="SKL Tersedia"></i>' : '';
                 const safeNISN = s.NISN.toString().replace(/'/g, "\\'");
 
                 htmlHTML += `
-                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center mb-3">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center mb-3 transition hover:shadow-md">
                         <div class="overflow-hidden pr-2">
                             <div class="font-bold text-gray-800 text-sm truncate">${s.Nama} ${sklIco}</div>
                             <div class="text-xs text-gray-500">${s.NISN}</div>
                             <div class="text-[10px] px-2 py-0.5 rounded inline-block mt-1 ${badge}">${s.Status_Kelulusan}</div>
                         </div>
-                        <button onclick="bukaModalSiswa('${safeNISN}')" class="shrink-0 w-8 h-8 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                        <button onclick="bukaModalSiswa('${safeNISN}')" class="shrink-0 w-8 h-8 bg-red-50 text-red-600 rounded-full flex items-center justify-center hover:bg-red-100 transition">
                             <i class="fas fa-pen text-xs"></i>
                         </button>
                     </div>
                 `;
             });
 
-            // Tambah tombol Load More jika masih ada sisa data
             if (filtered.length > endIndex) {
                 htmlHTML += `
-                    <button onclick="loadMoreSiswa()" class="w-full py-3 mt-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-100 transition shadow-sm border border-blue-100">
+                    <button onclick="loadMoreSiswa()" class="w-full py-3 mt-2 bg-red-50 text-red-600 rounded-xl text-sm font-bold hover:bg-red-100 transition shadow-sm border border-red-100">
                         Muat Lebih Banyak Data (${filtered.length - endIndex} tersisa)
                     </button>
                 `;
@@ -941,7 +935,7 @@
 
         function loadMoreSiswa() {
             currentPageSiswa++;
-            renderTabelSiswa(false); // Render tambahan tanpa reset page
+            renderTabelSiswa(false); 
         }
 
         function bukaModalSiswa(nisn) {
@@ -950,7 +944,6 @@
             frm.reset();
             document.getElementById('wrapLinkSKL').classList.add('hidden-el');
 
-            // Cek apakah ini mode edit (nisn diberikan) atau mode tambah (nisn = null)
             let data = null;
             if (nisn) {
                 data = mockDataSiswa.find(x => x.NISN === nisn);
@@ -959,8 +952,7 @@
             if(data) {
                 document.getElementById('modalSiswaTitle').innerText = "Edit Data Siswa";
                 document.getElementById('btnHapusSiswa').classList.remove('hidden-el');
-                // Mengisi form
-                document.getElementById('fId').value = data.NISN; // Use NISN as old ID
+                document.getElementById('fId').value = data.NISN; 
                 document.getElementById('fNISN').value = data.NISN;
                 document.getElementById('fPassword').value = data.Password || "";
                 document.getElementById('fNama').value = data.Nama;
@@ -1024,7 +1016,7 @@
                     hideLoader();
                     if(res.status === 'success') {
                         tutupModalSiswa();
-                        muatDataAdmin(); // reload
+                        muatDataAdmin(); 
                         showAlert("Data tersimpan!");
                     } else {
                         showAlert(res.message);
@@ -1036,7 +1028,6 @@
         function hapusSiswa() {
             const nisn = document.getElementById('fId').value;
             
-            // Menggunakan Custom Confirm alih-alih confirm() bawaan browser
             tampilkanConfirm(`Yakin ingin menghapus data siswa dengan NISN ${nisn}?`, () => {
                 if(IS_PREVIEW) {
                     mockDataSiswa = mockDataSiswa.filter(x => x.NISN !== nisn);
@@ -1060,14 +1051,11 @@
             });
         }
 
-        // Pengaturan
         function populateAdminSettings() {
             document.getElementById('setNamaSekolah').value = globalSettings.NAMA_SEKOLAH;
             document.getElementById('setLogo').value = globalSettings.LOGO_URL;
-            // Format datetime-local requires YYYY-MM-DDTHH:MM
             try {
                 const dt = new Date(globalSettings.WAKTU_PENGUMUMAN);
-                // Adjust to local datetime format
                 const dLocal = new Date(dt.getTime() - (dt.getTimezoneOffset() * 60000)).toISOString().slice(0,16);
                 document.getElementById('setWaktu').value = dLocal;
             } catch(e){}
@@ -1076,7 +1064,6 @@
         function simpanPengaturan(e) {
             e.preventDefault();
             const rawDt = document.getElementById('setWaktu').value;
-            // Convert back to ISO for uniform saving
             const dtObj = new Date(rawDt);
             
             const payload = {
@@ -1117,35 +1104,15 @@
         }
 
         function downloadTemplateExcel() {
-            // Membuat dummy data berdasarkan struktur
             const dataTemplate = [
-                { 
-                    NISN: "123456789", 
-                    Password: "password123",
-                    Nama: "Nama Lengkap Siswa", 
-                    TTL: "Jakarta, 01 Januari 2008", 
-                    Status_Kelulusan: "LULUS", 
-                    SKL_Tersedia: "TIDAK", 
-                    Link_SKL: "" 
-                },
-                { 
-                    NISN: "987654321", 
-                    Password: "password123",
-                    Nama: "Siswa Contoh Kedua", 
-                    TTL: "Bandung, 15 Maret 2008", 
-                    Status_Kelulusan: "TIDAK LULUS", 
-                    SKL_Tersedia: "TIDAK", 
-                    Link_SKL: "" 
-                }
+                { NISN: "123456789", Password: "password123", Nama: "Nama Lengkap Siswa", TTL: "Jakarta, 01 Januari 2008", Status_Kelulusan: "LULUS", SKL_Tersedia: "TIDAK", Link_SKL: "" },
+                { NISN: "987654321", Password: "password123", Nama: "Siswa Contoh Kedua", TTL: "Bandung, 15 Maret 2008", Status_Kelulusan: "TIDAK LULUS", SKL_Tersedia: "TIDAK", Link_SKL: "" }
             ];
 
             const ws = XLSX.utils.json_to_sheet(dataTemplate);
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, "Siswa");
-            
-            // Adjust column width (optional)
             ws['!cols'] = [{wch:15}, {wch:15}, {wch:30}, {wch:25}, {wch:18}, {wch:15}, {wch:30}];
-            
             XLSX.writeFile(wb, "Template_Import_Kelulusan.xlsx");
         }
 
@@ -1165,14 +1132,13 @@
                     const workbook = XLSX.read(data, {type: 'array'});
                     const firstSheetName = workbook.SheetNames[0];
                     const worksheet = workbook.Sheets[firstSheetName];
-                    const jsonData = XLSX.utils.sheet_to_json(worksheet, {defval: ""}); // defval:"" memastikan kolom kosong tetap terbaca
+                    const jsonData = XLSX.utils.sheet_to_json(worksheet, {defval: ""}); 
 
                     if(jsonData.length === 0) {
                         hideLoader();
                         return showAlert("File Excel kosong atau tidak valid!");
                     }
 
-                    // Validasi header sederhana
                     const sample = jsonData[0];
                     if(!("NISN" in sample) || !("Nama" in sample)) {
                         hideLoader();
@@ -1193,7 +1159,6 @@
 
         function kirimDataImport(jsonData) {
             if(IS_PREVIEW) {
-                // Simulasi update local data
                 setTimeout(() => {
                     hideLoader();
                     jsonData.forEach(newSiswa => {
@@ -1211,12 +1176,11 @@
                 }, 1000);
             } else {
                 showLoader("Menyimpan ke Database GAS...");
-                // Note: Pada data besar, payload size mungkin terbatas. Pastikan excel tidak lebih dari ratusan baris sekali import.
                 gasRequest({action: 'importSiswaBatch', data: jsonData}, res => {
                     hideLoader();
                     if(res.status === 'success') {
                         tutupModalImport();
-                        muatDataAdmin(); // Reload dari GAS
+                        muatDataAdmin(); 
                         showAlert(res.message || "Data berhasil diimport!");
                     } else {
                         showAlert("Gagal import: " + res.message);
@@ -1231,10 +1195,6 @@
         function gasRequest(payload, callback) {
             fetch(GAS_URL, {
                 method: 'POST',
-                // Mode 'no-cors' tidak bisa baca response, jadi GAS harus dikonfigurasi 
-                // deploy sebagai Web App "Anyone" dan handle preflight jika dipanggil dari domain lain, 
-                // ATAU gunakan URLSearchParams (Content-Type: application/x-www-form-urlencoded).
-                // Menggunakan form-urlencoded lebih aman untuk menghindari preflight OPTIONS.
                 body: new URLSearchParams({data: JSON.stringify(payload)}),
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             })
@@ -1248,4 +1208,3 @@
     </script>
 </body>
 </html>
-
